@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Big Game Hub</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <h1>Big Game Hub</h1>
+      <button id="themeToggle" class="btn" type="button" aria-label="Theme wechseln">
+        🌗 Theme
+      </button>
+    </header>
+
+    <main class="container">
+      <section class="card" aria-live="polite">
+        <h2>Kickoff-Countdown</h2>
+        <p class="muted">Bis zum Spielbeginn</p>
+        <div id="countdown" class="countdown">Lädt…</div>
+        <p class="hint">Konfiguriere das Datum in <code>script.js</code> über <code>kickoffISO</code>.</p>
+      </section>
+
+      <section class="card">
+        <h2>Party-Checkliste</h2>
+        <p class="muted">Alles bereit fürs große Spiel?</p>
+        <ul id="checklist" class="checklist">
+          <li><label><input type="checkbox" /> Snacks besorgen</label></li>
+          <li><label><input type="checkbox" /> Getränke kaltstellen</label></li>
+          <li><label><input type="checkbox" /> TV/Stream testen</label></li>
+          <li><label><input type="checkbox" /> Freunde einladen</label></li>
+        </ul>
+        <button id="saveChecklist" class="btn" type="button">✅ Speichern</button>
+        <span id="saveStatus" class="muted small" aria-live="polite"></span>
+      </section>
+
+      <section class="card">
+        <h2>Mini-Scoreboard (Demo)</h2>
+        <div class="scoreboard">
+          <div class="team">
+            <label class="label">Team A</label>
+            <input id="teamAName" class="input" type="text" value="Team A" />
+            <div class="score" id="scoreA">0</div>
+            <div class="score-controls">
+              <button class="btn" data-team="A" data-delta="1">+1</button>
+              <button class="btn" data-team="A" data-delta="-1">-1</button>
+            </div>
+          </div>
+          <div class="team">
+            <label class="label">Team B</label>
+            <input id="teamBName" class="input" type="text" value="Team B" />
+            <div class="score" id="scoreB">0</div>
+            <div class="score-controls">
+              <button class="btn" data-team="B" data-delta="1">+1</button>
+              <button class="btn" data-team="B" data-delta="-1">-1</button>
+            </div>
+          </div>
+        </div>
+        <button id="resetScores" class="btn" type="button">Reset</button>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p class="muted">Hinweis: Nutze neutrale Begriffe wie „Big Game“, um Markenrechte zu respektieren.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

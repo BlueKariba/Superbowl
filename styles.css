@@ -1,0 +1,183 @@
+:root {
+  --bg: #0f1115;
+  --card: #171a21;
+  --text: #f3f5f7;
+  --muted: #a7b0be;
+  --btn: #2b6fff;
+  --border: #2a2f3a;
+}
+
+html.light {
+  --bg: #f5f7fb;
+  --card: #ffffff;
+  --text: #0f1115;
+  --muted: #5f6b7a;
+  --btn: #1a5dff;
+  --border: #e3e7ef;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Avenir Next", "Avenir", "Gill Sans", "Trebuchet MS", "Segoe UI", sans-serif;
+  background: radial-gradient(circle at top, rgba(43, 111, 255, 0.15), transparent 45%),
+    var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+.topbar {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 24px 20px 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.topbar h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  letter-spacing: 0.3px;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 12px 20px 40px;
+  display: grid;
+  gap: 20px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.card h2 {
+  margin: 0 0 6px;
+  font-size: 1.3rem;
+}
+
+.muted {
+  color: var(--muted);
+  margin: 0 0 10px;
+}
+
+.small {
+  font-size: 0.9rem;
+}
+
+.countdown {
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  padding: 12px 0;
+}
+
+.hint {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.btn {
+  background: var(--btn);
+  border: none;
+  color: #ffffff;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: transform 0.1s ease, box-shadow 0.2s ease;
+  box-shadow: 0 6px 16px rgba(26, 93, 255, 0.35);
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.input {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text);
+  font-size: 1rem;
+}
+
+.checklist {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 12px;
+  display: grid;
+  gap: 8px;
+}
+
+.checklist input {
+  margin-right: 10px;
+  accent-color: var(--btn);
+}
+
+.scoreboard {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.team {
+  display: grid;
+  gap: 10px;
+}
+
+.label {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--muted);
+}
+
+.score {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  padding: 10px 0;
+  border: 1px dashed var(--border);
+  border-radius: 12px;
+}
+
+.score-controls {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.footer {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px 30px;
+}
+
+@media (max-width: 600px) {
+  .topbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .countdown {
+    font-size: 1.3rem;
+  }
+}
